@@ -16,4 +16,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello World!"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/holi"
+        android:backgroundTint="?android:attr/colorMultiSelectHighlight"
+        android:text="Start activity"
+        android:textColor="@android:color/background_light"/>
 </RelativeLayout>

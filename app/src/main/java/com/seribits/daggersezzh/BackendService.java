@@ -1,10 +1,6 @@
 package com.seribits.daggersezzh;
 
-import com.seribits.daggersezzh.components.DaggerUserComponent;
-import com.seribits.daggersezzh.components.UserComponent;
-
 import javax.inject.Inject;
-import javax.inject.Named;
 
 /**
  * Created by sezzh on 15/02/17.
@@ -12,24 +8,16 @@ import javax.inject.Named;
 
 public class BackendService {
 
-    @Inject
-    public User user;
-    private String serverUrl;
-    private UserComponent component;
+    private String user;
 
-    @Inject
-    public BackendService(@Named("serverUrl") String serverUrl) {
-        this.serverUrl = serverUrl;
-        component = DaggerUserComponent.builder().build();
-        component.inject(this);
 
+    public BackendService(String user) {
+        this.user = user;
     }
 
-    public String callServer() {
-        if (user != null && serverUrl != null && serverUrl.length() > 0) {
-            return "User: " + user;
-        }
-        return "no user...";
+    public String getInjectedUser() {
+        return String.format("usuario : %s", user);
     }
+
 
 }

@@ -1,4 +1,4 @@
-package com.seribits.daggersezzh;
+package com.seribits.daggersezzh.io.models;
 
 /**
  * Created by sezzh on 15/02/17.
@@ -18,5 +18,21 @@ public class User {
     @Override
     public String toString() {
         return "User [firstName=" + firstName + ", lastName=" + lastName + "]";
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 }
